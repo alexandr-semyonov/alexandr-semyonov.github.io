@@ -1,0 +1,29 @@
+{
+  "name": "alexandr-semyonov.github.io",
+  "version": "1.0.0",
+  "description": "Package for LITS",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandr-semyonov/alexandr-semyonov.github.io.git"
+  },
+  "keywords": [
+    "train",
+    "gulp"
+  ],
+  "author": "Alexandr Semyonov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexandr-semyonov/alexandr-semyonov.github.io/issues"
+  },
+  "homepage": "https://github.com/alexandr-semyonov/alexandr-semyonov.github.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.10.0"
+  }
+}
