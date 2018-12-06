@@ -11,7 +11,7 @@ function getReminder(dividend, divider) {
 // don't use: *, / and %
 function integerDivision(dividend, divider) {
   var res = 1;
-  while (dividend - divider >= divider){
+  while (dividend - divider > divider){
     dividend = dividend - divider;
     res++;
   }
