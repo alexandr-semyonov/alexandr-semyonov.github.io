@@ -31,11 +31,11 @@ gulp.task('style', function(){
 gulp.task('serve', ['style'], function() {
 
     browserSync.init({
-        server: "./app"
+        server: "."
     });
 
     gulp.watch('sass/**/*.sass', ['style'])
     gulp.watch("./*.html").on('change', browserSync.reload);
 });
 
-gulp.task('default', ['watch'])
+gulp.task('default', ['serve'])
