@@ -25,4 +25,17 @@ gulp.task('style', function(){
         .pipe(csso())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('css'))
+        .pipe(browserSync.stream());
 })
+
+gulp.task('serve', ['style'], function() {
+
+    browserSync.init({
+        server: "./app"
+    });
+
+    gulp.watch('sass/**/*.sass', ['style'])
+    gulp.watch("./*.html").on('change', browserSync.reload);
+});
+
+gulp.task('default', ['watch'])
