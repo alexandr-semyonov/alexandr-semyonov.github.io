@@ -10,7 +10,7 @@ function btnSubmit() {
   var growthValue = document.querySelector("#growth").value;
   if (ageValue && growthValue){
     result.classList.add("result");
-    idealWeight = 50 + 0.75*(growthValue - 150) + (ageValue - 20);
+    idealWeight = Math.floor( 50 + 0.75*(growthValue - 150) + (ageValue - 20) );
     if (idealWeight > 0){
     result.value = idealWeight + ' кг.';
     } else {
