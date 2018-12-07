@@ -3,24 +3,35 @@
 
 /* basic stylings ------------------------------------------ */
 .container
-  font-family: Open Sans Condensed
+  box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2)
+  padding-bottom: 40px
+  border-radius: 3px
+  font-family: 'roboto', sans-serif
   width: 400px
   margin: 0 auto
   display: block
   background: #FFF
-  padding: 10px 50px
 
 h2
+  padding: 20px
   margin-bottom: 30px
   line-height: 35px
   text-transform: uppercase
   background: $light-blue
+  border-radius: 3px 3px 0 0
+  box-shadow: 0 2px 5px 1px rgba(0,0,0,0.2)
+  color: white
   small
+    font-size: 14px
+    line-height: 20px
     font-weight: normal
-    color: #ccc
+    color: lighten($light-blue,30%)
     display: block
 
 /* form starting stylings ------------------------------- */
+form
+  padding: 0 35px
+
 .group
   position: relative
   margin-bottom: 30px
