@@ -10,13 +10,17 @@ function btnSubmit() {
   var growthValue = document.querySelector("#growth").value;
   if (ageValue && growthValue){
     result.classList.add("result");
-    idealWeight = Math.floor(50 + 0.75*(growthValue - 150) + (ageValue - 20));
-    if (idealWeight > 0){
+    if (checkCorrecktnes(growthValue, ageValue)){
     result.value = idealWeight + ' кг.';
     } else {
       result.value = 'Пожалуйста правильность данных';
     }
   }
+}
+
+function checkCorrecktnes(growth, age) {
+  idealWeight = 50 + 0.75*(growth - 150) + (age - 20);
+  return idealWeight > 0
 }
 
 function btnReset(){
