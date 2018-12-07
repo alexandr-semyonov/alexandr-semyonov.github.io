@@ -7,9 +7,6 @@ var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var notify = require('gulp-notify');
 
-// Static Server + watching scss/html files
-
-
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('style', function(){
     return gulp.src('sass/style.sass')
@@ -29,6 +26,9 @@ gulp.task('style', function(){
         .pipe(gulp.dest('css'))
         .pipe(browserSync.stream());
 })
+
+
+// Static Server + watching scss/html files
 
 gulp.task('serve', ['style'], function() {
 
