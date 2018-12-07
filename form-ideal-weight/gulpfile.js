@@ -1,6 +1,7 @@
 var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass        = require('gulp-sass');
+var sassGlob = require('gulp-sass-glob');
 var csso        = require('gulp-csso');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
@@ -13,6 +14,7 @@ var notify = require('gulp-notify');
 gulp.task('style', function(){
     return gulp.src('sass/style.sass')
         .pipe(sourcemaps.init())
+        .pipe(sassGlob())
         .pipe(sass())
         .pipe(autoprefixer({
             browsers: ['last 3 versions'],
