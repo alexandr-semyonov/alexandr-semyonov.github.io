@@ -12,10 +12,10 @@
 
 <body>
     <div class="container">
-        <h2>Вычисли свой идеальный вес!
+        <h2>Вычислите свой идеальный вес!
             <small>Введите Ваш рост и вес, затем нажмите ввод либо кликните по кнопке "Вычислить результат"</small>
         </h2>
-        <form action="">
+        <form>
             <div class="group">
                 <input type="number" id="age" required>
                 <span class="bar"></span>
@@ -25,14 +25,14 @@
                 <input type="number" id="growth" required>
                 <span class="bar"></span>
                 <label>Ваш рост (см)</label>
-            </div>
+            </div>            
+            <button onclick="btnSubmit()" class="btn bubble">Вычислить результат</button>
+            <button onclick="btnReset()" class="btn bubble" type="reset">Reset</button>
             <div class="group">
                 <input type="text" id="result" disabled>
                 <span class="bar"></span>
                 <label>Ваш идеальный вес</label>
             </div>
-            <button onclick="btnSubmit()" class="btn bubble">Вычислить результат</button>
-            <button onclick="btnReset()" class="btn bubble"type="reset"">Reset</button>
         </form>
     </div>
     <script src="main.js"></script>
